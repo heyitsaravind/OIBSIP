@@ -1,10 +1,22 @@
-# OIBSIP - Oasis Infobyte Internship Program
+# OIBSIP - Oasis Infobyte Internship Projects
 
-This repository contains all the tasks completed during my Java Developer internship at Oasis Infobyte.
+This repository contains all the projects completed during my internship at Oasis Infobyte.
 
-## Tasks Completed
+## Projects
 
-### Task 1: ATM Interface
+### 1. Guess the Number Game
+A fun Java console game where players try to guess a randomly generated number.
+
+**Features:**
+- Random number generation (1-100)
+- Limited attempts per round
+- Multiple rounds support
+- Scoring system based on attempts
+- Game statistics
+
+**Location:** `GuessTheNumber/`
+
+### 2. ATM Interface
 **Location:** `Task1-ATM-Interface/`
 
 A comprehensive console-based ATM system built in Java demonstrating:
@@ -37,6 +49,8 @@ java ATMSystem
 ```
 OIBSIP/
 ├── README.md
+├── GuessTheNumber/
+│   └── [Guess the Number Game files]
 ├── Task1-ATM-Interface/
 │   ├── ATMSystem.java
 │   ├── ATM.java
@@ -62,6 +76,6 @@ This repository showcases practical Java development skills including:
 - Version control with Git
 
 ---
-**Intern:** [Your Name]  
-**Program:** Java Developer Internship  
-**Organization:** Oasis Infobyte
+**Author:** Aravind M S  
+**Email:** aravindms046@gmail.com  
+**Internship:** Oasis Infobyte
