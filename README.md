@@ -22,7 +22,7 @@ A comprehensive console-based ATM system demonstrating core banking operations w
 ---
 
 ### Task 2: Number Guessing Game
-**Location:** `GuessTheNumber/`
+**Location:** `Task2-GuessTheNumber/`
 
 An interactive console game that challenges players to guess randomly generated numbers with scoring and statistics.
 
@@ -89,7 +89,7 @@ A comprehensive web-based examination platform with real-time assessment capabil
 ```
 OIBSIP/
 ├── README.md                           # This overview
-├── GuessTheNumber/                     # Task 2: Number Guessing Game
+├── Task2-GuessTheNumber/               # Task 2: Number Guessing Game
 │   └── [Game implementation files]
 ├── Task1-ATM-Interface/               # Task 1: ATM System
 │   ├── ATMSystem.java                 # Main application
@@ -181,7 +181,7 @@ java ATMSystem
 
 ### Task 2: Number Guessing Game
 ```bash
-cd GuessTheNumber
+cd Task2-GuessTheNumber
 javac *.java
 java NumberGuessingGame
 ```
