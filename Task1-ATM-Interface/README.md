@@ -25,15 +25,35 @@ This console-based ATM system simulates real ATM functionality with user authent
 
 ## How to Run
 
+### Version 1: Basic ATM System
 1. Compile all Java files:
    ```bash
    javac *.java
    ```
 
-2. Run the main application:
+2. Run the basic version:
    ```bash
    java ATMSystem
    ```
+
+### Version 2: Enhanced ATM Console App (Recommended)
+1. Compile all Java files:
+   ```bash
+   javac *.java
+   ```
+
+2. Run the enhanced version:
+   ```bash
+   java ATMConsoleApp
+   ```
+
+**Enhanced Features:**
+- Modern Java syntax with switch expressions
+- Better error handling with InputMismatchException
+- Indian Rupee (₹) currency support
+- Professional "SECURE ATM PORTAL" interface
+- Improved resource management
+- Robust input validation
 
 ## Sample Test Accounts
 
