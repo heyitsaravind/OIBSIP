@@ -1,24 +1,24 @@
-# Task 3: Online Reservation System - RailConnect
+# Online Reservation System
 
 ## 🚂 Project Overview
 
-**RailConnect** is an advanced train booking management system developed as part of the Oasis Infobyte internship program. This comprehensive Java application demonstrates modern software development practices with a focus on user experience, data integrity, and scalable architecture.
+**Online Reservation System** is an advanced train booking management system developed as part of the Oasis Infobyte internship program. This comprehensive Java application demonstrates modern software development practices with a focus on user experience, data integrity, and scalable architecture.
 
 ## ✨ Key Features
 
 ### Core Functionality
-- 🔐 **Secure User Authentication** - Registration and login with validation
-- 🔍 **Intelligent Train Search** - Find trains by route with real-time availability
-- 🎫 **Advanced Booking System** - Reserve tickets with unique confirmation codes
-- 📋 **Reservation Management** - View and cancel existing bookings
-- 💰 **Dynamic Pricing Engine** - Smart fare calculation with surge pricing
+-  **Secure User Authentication** - Registration and login with validation
+-  **Intelligent Train Search** - Find trains by route with real-time availability
+-  **Advanced Booking System** - Reserve tickets with unique confirmation codes
+-  **Reservation Management** - View and cancel existing bookings
+-  **Dynamic Pricing Engine** - Smart fare calculation with surge pricing
 
 ### Technical Highlights
-- 🏗️ **Modern Architecture** - Service layer, DAO pattern, separation of concerns
-- 🎨 **Enhanced Console UI** - Color-coded interface with intuitive navigation
-- 🔒 **Robust Validation** - Multi-layer input validation and error handling
-- 📊 **Professional Database Design** - Optimized schema with proper indexing
-- 🚀 **Performance Optimized** - Singleton connection manager with pooling
+-  **Modern Architecture** - Service layer, DAO pattern, separation of concerns
+-  **Enhanced Console UI** - Color-coded interface with intuitive navigation
+-  **Robust Validation** - Multi-layer input validation and error handling
+-  **Professional Database Design** - Optimized schema with proper indexing
+-  **Performance Optimized** - Singleton connection manager with pooling
 
 ## 🛠️ Technology Stack
 
@@ -31,7 +31,7 @@
 ## 📁 Project Structure
 
 ```
-Task3-Online-Reservation-System/
+Online-Reservation-System/
 ├── src/main/java/com/reservation/
 │   ├── model/                          # Data Models
 │   │   ├── User.java                   # Customer account management
@@ -163,22 +163,6 @@ This project demonstrates proficiency in:
 - **Error Handling** - Robust exception management and validation
 - **Documentation** - Comprehensive code documentation and user guides
 
-## 🚀 Future Enhancements
-
-- **Web Interface**: Spring Boot REST API with React frontend
-- **Payment Integration**: Secure online payment processing
-- **Email Notifications**: Automated booking confirmations
-- **Mobile Application**: Cross-platform mobile app
-- **Admin Dashboard**: System management and analytics
-- **Reporting System**: Business intelligence and insights
-
-## 📝 Internship Context
-
-**Developed for**: Oasis Infobyte Internship Program  
-**Task**: Task 3 - Online Reservation System  
-**Duration**: [Your internship duration]  
-**Objective**: Demonstrate advanced Java programming skills and software development practices
-
 ## 🏆 Project Highlights
 
 ✅ **Complete Implementation** - Fully functional reservation system  
@@ -192,5 +176,3 @@ This project demonstrates proficiency in:
 ---
 
 **RailConnect** - Making train travel booking simple, smart, and secure! 🚂✨
-
-*This project showcases advanced Java development skills and modern software engineering practices suitable for enterprise-level applications.*
