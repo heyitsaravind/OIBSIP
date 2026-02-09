@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-book"></i>
+                <span>Digital Library</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#" class="nav-link" onclick="showSection('home')">Home</a>
+                <a href="#" class="nav-link" onclick="showSection('books')">Books</a>
+                <a href="#" class="nav-link user-only" onclick="showSection('my-books')" style="display: none;">My Books</a>
+                <a href="#" class="nav-link admin-only" onclick="showSection('admin')" style="display: none;">Admin</a>
+                <a href="#" class="nav-link" id="authLink" onclick="showAuthModal()">Login</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Welcome to Digital Library</h1>
+                    <p>Your gateway to knowledge and learning. Browse thousands of books, manage your reading list, and explore new worlds of information.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showSection('books')">Browse Books</button>
+                        <button class="btn btn-secondary" onclick="showAuthModal()">Get Started</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features">
+                <div class="container">
+                    <h2>Features</h2>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-search"></i>
+                            <h3>Smart Search</h3>
+                            <p>Find books by title, author, category, or ISBN with our advanced search system.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-bookmark"></i>
+                            <h3>Book Reservations</h3>
+                            <p>Reserve books in advance and get notified when they become available.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-clock"></i>
+                            <h3>Due Date Tracking</h3>
+                            <p>Never miss a return date with our automated reminder system.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Query Support</h3>
+                            <p>Get help from our librarians through our integrated query system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Books Section -->
+        <section id="books" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Book Collection</h2>
+                    <div class="search-filters">
+                        <div class="search-box">
+                            <input type="text" id="bookSearch" placeholder="Search books...">
+                            <button onclick="searchBooks()"><i class="fas fa-search"></i></button>
+                        </div>
+                        <select id="categoryFilter" onchange="searchBooks()">
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="booksGrid" class="books-grid">
+                    <!-- Books will be loaded here -->
+                </div>
+                
+                <div id="booksPagination" class="pagination">
+                    <!-- Pagination will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- My Books Section (User Only) -->
+        <section id="my-books" class="section">
+            <div class="container">
+                <h2>My Books</h2>
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="showTab('current-books')">Current Books</button>
+                    <button class="tab-btn" onclick="showTab('history')">History</button>
+                    <button class="tab-btn" onclick="showTab('reservations')">Reservations</button>
+                    <button class="tab-btn" onclick="showTab('queries')">My Queries</button>
+                </div>
+                
+                <div id="current-books" class="tab-content active">
+                    <div id="currentBooksGrid" class="books-grid">
+                        <!-- Current books will be loaded here -->
+                    </div>
+                </div>
+                
+                <div id="history" class="tab-content">
+                    <div id="historyGrid" class="transaction-list">
+                        <!-- History will be loaded here -->
+                    </div>
+                </div>
+                
+                <div id="reservations" class="tab-content">
+                    <div id="reservationsGrid" class="books-grid">
+                        <!-- Reservations will be loaded here -->
+                    </div>
+                </div>
+                
+                <div id="queries" class="tab-content">
+                    <button class="btn btn-primary" onclick="showQueryModal()">Submit New Query</button>
+                    <div id="queriesGrid" class="queries-list">
+                        <!-- Queries will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Section -->
+        <section id="admin" class="section">
+            <div class="container">
+                <h2>Admin Dashboard</h2>
+                <div class="admin-tabs">
+                    <button class="tab-btn active" onclick="showAdminTab('dashboard')">Dashboard</button>
+                    <button class="tab-btn" onclick="showAdminTab('manage-books')">Manage Books</button>
+                    <button class="tab-btn" onclick="showAdminTab('manage-members')">Manage Members</button>
+                    <button class="tab-btn" onclick="showAdminTab('transactions')">Transactions</button>
+                    <button class="tab-btn" onclick="showAdminTab('reports')">Reports</button>
+                </div>
+                
+                <div id="dashboard" class="admin-content active">
+                    <div id="dashboardStats" class="stats-grid">
+                        <!-- Dashboard stats will be loaded here -->
+                    </div>
+                </div>
+                
+                <div id="manage-books" class="admin-content">
+                    <div class="admin-actions">
+                        <button class="btn btn-primary" onclick="showBookModal()">Add New Book</button>
+                    </div>
+                    <div id="adminBooksGrid" class="admin-table">
+                        <!-- Admin books table will be loaded here -->
+                    </div>
+                </div>
+                
+                <div id="manage-members" class="admin-content">
+                    <div id="adminMembersGrid" class="admin-table">
+                        <!-- Admin members table will be loaded here -->
+                    </div>
+                </div>
+                
+                <div id="transactions" class="admin-content">
+                    <div class="admin-actions">
+                        <button class="btn btn-primary" onclick="showIssueModal()">Issue Book</button>
+                        <button class="btn btn-secondary" onclick="showReturnModal()">Return Book</button>
+                    </div>
+                    <div id="adminTransactionsGrid" class="admin-table">
+                        <!-- Admin transactions table will be loaded here -->
+                    </div>
+                </div>
+                
+                <div id="reports" class="admin-content">
+                    <div id="reportsGrid" class="reports-grid">
+                        <!-- Reports will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('authModal')">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="showAuthTab('login')">Login</button>
+                <button class="tab-btn" onclick="showAuthTab('register')">Register</button>
+            </div>
+            
+            <div id="login" class="auth-form active">
+                <h3>Login</h3>
+                <form onsubmit="login(event)">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+            
+            <div id="register" class="auth-form">
+                <h3>Register</h3>
+                <form onsubmit="register(event)">
+                    <input type="text" id="registerName" placeholder="Full Name" required>
+                    <input type="email" id="registerEmail" placeholder="Email" required>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                    <input type="tel" id="registerPhone" placeholder="Phone Number">
+                    <textarea id="registerAddress" placeholder="Address"></textarea>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Modal (Admin) -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bookModal')">&times;</span>
+            <h3 id="bookModalTitle">Add New Book</h3>
+            <form onsubmit="saveBook(event)">
+                <input type="hidden" id="bookId">
+                <input type="text" id="bookISBN" placeholder="ISBN">
+                <input type="text" id="bookTitle" placeholder="Title" required>
+                <input type="text" id="bookAuthor" placeholder="Author" required>
+                <input type="text" id="bookCategory" placeholder="Category" required>
+                <input type="text" id="bookPublisher" placeholder="Publisher">
+                <input type="number" id="bookYear" placeholder="Publication Year">
+                <input type="number" id="bookCopies" placeholder="Total Copies" min="1" value="1">
+                <textarea id="bookDescription" placeholder="Description"></textarea>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">Save Book</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('bookModal')">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Query Modal -->
+    <div id="queryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('queryModal')">&times;</span>
+            <h3>Submit Query</h3>
+            <form onsubmit="submitQuery(event)">
+                <input type="text" id="querySubject" placeholder="Subject" required>
+                <textarea id="queryMessage" placeholder="Your message..." required></textarea>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">Submit Query</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('queryModal')">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Issue Book Modal (Admin) -->
+    <div id="issueModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('issueModal')">&times;</span>
+            <h3>Issue Book</h3>
+            <form onsubmit="issueBook(event)">
+                <select id="issueUserId" required>
+                    <option value="">Select Member</option>
+                </select>
+                <select id="issueBookId" required>
+                    <option value="">Select Book</option>
+                </select>
+                <input type="number" id="issueDays" placeholder="Days to return" value="14" min="1" max="30">
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">Issue Book</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('issueModal')">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Return Book Modal (Admin) -->
+    <div id="returnModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('returnModal')">&times;</span>
+            <h3>Return Book</h3>
+            <form onsubmit="returnBook(event)">
+                <select id="returnTransactionId" required>
+                    <option value="">Select Active Transaction</option>
+                </select>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">Return Book</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('returnModal')">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
