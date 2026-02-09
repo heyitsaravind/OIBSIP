@@ -2,7 +2,6 @@
  * ATM Interface System
  * A simple and efficient ATM banking application
  * Author: Aravind M S
- * Created for: OIBSIP Java Development Internship
  */
 
 import java.util.*;
@@ -27,9 +26,9 @@ public class ATMInterface {
     }
     
     private static void setupSampleAccounts() {
-        accountDatabase.put("12345", new BankAccount("12345", "1234", "Aravind Kumar", 15000.0));
-        accountDatabase.put("67890", new BankAccount("67890", "5678", "Priya Sharma", 25000.0));
-        accountDatabase.put("11111", new BankAccount("11111", "0000", "Demo User", 5000.0));
+        accountDatabase.put("12345", new BankAccount("12345", "1234", "Aravind Sreekumar", 15000.0));
+        accountDatabase.put("67890", new BankAccount("67890", "5678", "Shreyas R Pillai", 25000.0));
+        accountDatabase.put("11111", new BankAccount("11111", "0000", "Vighnesh C", 5000.0));
     }
     
     private static void displayWelcomeBanner() {
