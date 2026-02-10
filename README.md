@@ -33,8 +33,8 @@ Online exam platform with MCQ and timer.
 
 **Run:**
 ```bash
-javac Task2-Online-Examination/*.java
-java -cp Task2-Online-Examination ExamSystem
+cd ~/Documents/Java\ Apps/DIGITAL\ LIBRARY\ MANAGEMENT/Task2-Online-Examination && javac *.java && java ExamSystem
+
 ```
 
 ## Contact
