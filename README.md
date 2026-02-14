@@ -15,8 +15,10 @@ Console-based ATM system with banking operations.
 
 **Run:**
 ```bash
-javac Task1-Enhanced-ATM/*.java
-java -cp Task1-Enhanced-ATM ATMInterface
+cd ~/Documents/Java\ Apps/DIGITAL\ LIBRARY\ MANAGEMENT
+cd Task1-Enhanced-ATM
+javac *.java
+java ATMInterface
 ```
 
 ## Task 2: Online Examination System
