@@ -50,7 +50,8 @@ The system provides a realistic ATM experience with professional console interfa
 ## How to Run
 
 ```bash
-cd OIBSIP_JavaDevelopement_Task1
+cd ~/Documents/Java\ Apps/DIGITAL\ LIBRARY\ MANAGEMENT
+cd Task1-Enhanced-ATM
 javac *.java
 java ATMInterface
 ```
