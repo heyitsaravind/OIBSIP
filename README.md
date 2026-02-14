@@ -35,7 +35,10 @@ Online exam platform with MCQ and timer.
 
 **Run:**
 ```bash
-cd ~/Documents/Java\ Apps/DIGITAL\ LIBRARY\ MANAGEMENT/Task2-Online-Examination && javac *.java && java ExamSystem
+cd ~/Documents/Java\ Apps/DIGITAL\ LIBRARY\ MANAGEMENT
+cd OIBSIP_JavaDevelopement_Task2
+javac *.java
+java ExamSystem
 
 ```
 
