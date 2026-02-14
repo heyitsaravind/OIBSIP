@@ -55,6 +55,7 @@ The system provides a realistic online exam experience with time pressure simula
 ## How to Run
 
 ```bash
+cd ~/Documents/Java\ Apps/DIGITAL\ LIBRARY\ MANAGEMENT
 cd OIBSIP_JavaDevelopement_Task2
 javac *.java
 java ExamSystem
