@@ -1,0 +1,229 @@
+================================================================================
+TASK 1: ATM INTERFACE SYSTEM - DEMONSTRATION SCRIPT
+================================================================================
+Duration: 3-5 minutes
+Presenter: Aravind M S
+Project: OIBSIP Java Development Internship
+================================================================================
+
+INTRODUCTION (30 seconds)
+--------------------------------------------------------------------------------
+Hello everyone! I'm Aravind M S, and today I'll be demonstrating Task 1 from my 
+Oasis Infobyte Java Development Internship - the ATM Interface System.
+
+This is a console-based banking application that simulates real ATM operations 
+with secure authentication and transaction management. The system is built using 
+core Java and follows Object-Oriented Programming principles.
+
+Let me show you how it works.
+
+
+SECTION 1: PROJECT OVERVIEW (30 seconds)
+--------------------------------------------------------------------------------
+The ATM Interface System provides five main features:
+
+1. Transaction History - View all your past transactions
+2. Withdraw - Take money out of your account
+3. Deposit - Add money to your account
+4. Transfer - Send money to another account
+5. Quit - Safely logout from the system
+
+The application uses three Java classes:
+- ATMInterface.java - The main program with user interface
+- BankAccount.java - Manages account data and operations
+- TransactionRecord.java - Tracks all transactions with timestamps
+
+
+SECTION 2: RUNNING THE APPLICATION (15 seconds)
+--------------------------------------------------------------------------------
+[SHOW TERMINAL]
+
+To run the application, I'll use these commands:
+First, compile all Java files: javac Task1-Enhanced-ATM/*.java
+Then run the program: java -cp Task1-Enhanced-ATM ATMInterface
+
+[EXECUTE THE COMMANDS]
+
+
+SECTION 3: LOGIN DEMONSTRATION (45 seconds)
+--------------------------------------------------------------------------------
+[SHOW WELCOME SCREEN]
+
+As you can see, the system displays a professional welcome banner and 
+authentication menu.
+
+Let me first view the sample credentials by selecting option 2.
+
+[SELECT OPTION 2]
+
+The system provides three demo accounts for testing. I'll login using 
+Account Number: 12345 and PIN: 1234
+
+[SELECT OPTION 1, ENTER CREDENTIALS]
+
+Great! Login successful. The system welcomes me by name - "Welcome, Aravind Kumar"
+and displays the main menu with all five features.
+
+
+SECTION 4: FEATURE DEMONSTRATIONS (2 minutes)
+--------------------------------------------------------------------------------
+
+FEATURE 1: TRANSACTION HISTORY
+[SELECT OPTION 1]
+
+The transaction history shows all activities with:
+- Date and time stamps
+- Transaction type
+- Amount involved
+- Detailed description
+
+Currently, we can see the login activity. Let's perform some transactions 
+to see how this updates.
+
+
+FEATURE 2: DEPOSIT
+[SELECT OPTION 3]
+
+Let me deposit Rs. 5,000 into the account.
+[ENTER 5000]
+
+Perfect! The system confirms:
+- Amount deposited: Rs. 5,000
+- Updated balance: Rs. 20,000 (was 15,000)
+- Transaction timestamp
+
+Notice the balance increased from 15,000 to 20,000.
+
+
+FEATURE 3: WITHDRAW
+[SELECT OPTION 2]
+
+Now let me withdraw Rs. 2,000.
+[ENTER 2000]
+
+Excellent! The withdrawal is successful:
+- Amount withdrawn: Rs. 2,000
+- Remaining balance: Rs. 18,000
+- Transaction completed with timestamp
+
+The system also has built-in validations:
+- Cannot withdraw more than available balance
+- Maximum withdrawal limit of Rs. 50,000 per transaction
+
+
+FEATURE 4: TRANSFER
+[SELECT OPTION 4]
+
+Let me transfer Rs. 3,000 to another account.
+I'll transfer to account number 67890, which belongs to Priya Sharma.
+
+[ENTER 67890]
+
+The system displays the recipient's name for verification.
+
+[ENTER 3000]
+
+Transfer successful! The system shows:
+- Amount transferred: Rs. 3,000
+- Recipient name: Priya Sharma
+- Updated balance: Rs. 15,000
+
+This feature includes security checks:
+- Verifies recipient account exists
+- Cannot transfer to same account
+- Maximum transfer limit of Rs. 25,000
+
+
+VIEWING UPDATED TRANSACTION HISTORY
+[SELECT OPTION 1]
+
+Now let's check the transaction history again.
+
+As you can see, all our transactions are recorded:
+1. Login activity
+2. Deposit of Rs. 5,000
+3. Withdrawal of Rs. 2,000
+4. Transfer of Rs. 3,000 to Priya Sharma
+
+Each transaction has complete details with timestamps.
+
+
+FEATURE 5: QUIT
+[SELECT OPTION 5]
+
+Finally, let me logout using the Quit option.
+
+The system displays a thank you message and safely terminates the session.
+All transaction data is preserved in the account object.
+
+
+SECTION 5: CODE ARCHITECTURE (45 seconds)
+--------------------------------------------------------------------------------
+[OPTIONALLY SHOW CODE IN EDITOR]
+
+Let me briefly explain the code structure:
+
+The BankAccount class handles:
+- Account information (number, PIN, holder name, balance)
+- Transaction list management
+- Deposit and withdrawal operations
+
+The TransactionRecord class stores:
+- Transaction type and amount
+- Description and timestamp
+- Formatted date/time display
+
+The ATMInterface class provides:
+- User authentication
+- Menu-driven interface
+- Input validation and error handling
+- All five feature implementations
+
+
+SECTION 6: KEY FEATURES & VALIDATIONS (30 seconds)
+--------------------------------------------------------------------------------
+The system includes several important validations:
+
+1. Secure PIN-based authentication
+2. Amount validation (must be positive numbers)
+3. Balance checking before withdrawals
+4. Transaction limits for security
+5. Account verification for transfers
+6. Complete transaction logging
+7. Professional error messages
+
+
+CONCLUSION (30 seconds)
+--------------------------------------------------------------------------------
+To summarize, this ATM Interface System demonstrates:
+
+✓ Core Java programming skills
+✓ Object-Oriented Programming principles
+✓ User input handling and validation
+✓ Data structure usage (HashMap, ArrayList)
+✓ Professional console interface design
+✓ Real-world banking logic implementation
+
+The complete source code is available on my GitHub repository at:
+github.com/heyitsaravind/OIBSIP
+
+Thank you for watching this demonstration! This project has helped me strengthen 
+my Java development skills and understand real-world application design.
+
+If you have any questions, feel free to reach out.
+
+Thank you!
+
+================================================================================
+END OF SCRIPT
+================================================================================
+
+TIPS FOR RECORDING:
+- Speak clearly and at a moderate pace
+- Show your face or use screen recording with voiceover
+- Pause briefly between sections
+- Keep terminal text size large and readable
+- Test all features before recording
+- Have the script open on another screen for reference
+- Record in a quiet environment
+- You can skip the code architecture section if time is limited
