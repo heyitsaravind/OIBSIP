@@ -16,7 +16,7 @@ Console-based ATM system with banking operations.
 **Run:**
 ```bash
 cd ~/Documents/Java\ Apps/DIGITAL\ LIBRARY\ MANAGEMENT
-cd Task1-Enhanced-ATM
+cd OIBSIP_JavaDevelopement_Task1
 javac *.java
 java ATMInterface
 ```
